@@ -15,11 +15,37 @@ public class Uzduotis2 {
     Scanner sc = new Scanner(System.in);
 
     public void masyvas() {
+        System.out.println("Iveskite masyvo ilgį.");
         int num = sc.nextInt();
-        int arr[] = new int[20];
+        int mas[] = new int[num];
 
-        for (int i = 0; i < arr.length; i++) ;
-        System.out.println("Iveskite masyvo narius: ");
+        for (int i = 0; i < mas.length; i++) {
+            System.out.println("Iveskite masyvo: " + "'" + (i + 1) + "'" + " skaičių: ");
+            mas[i] = sc.nextInt();
+        }
+        for (int i = 0; i < mas.length; i++) {
+            System.out.println("Masyvo nariai: " + (i + 1) + " : " + mas[i] + "\n");
+        }
+        for (int i = 0; i < mas.length; i++) {
+            if (num > mas[i]) {
+                System.out.println("Įvesti skaiciai mazesni nei paskutinis įvestas masyvo narys: " + mas[i]);
+            }
+        }
 
+        for (int i = 0; i < mas.length; i++) {
+            if (mas[i] % 2 == 0) {
+                System.out.println("Masyvo skaičiai kurie yra lyginiai: " + mas[i]);
+            }
+        }
+        for (int i = 0; i < mas.length; i++) {
+            if (mas[i] % mas.length == 0) {
+                System.out.println("Skaiciai kurie dalinasi is masyvo elementu ilgio: " + mas[i]);
+            }
+        }
+        for (int i = 0; i < mas.length; i++) {
+            if (mas[0] <= i) {
+                System.out.println("Skaičiai kurie yra didesni už skaičių esantį kairiau: " + mas[i]);
+            }
+        }
     }
 }
