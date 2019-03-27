@@ -60,8 +60,21 @@ public class Main {
     public static void kiekVeliaveliu(){
         Scanner myObj = new Scanner(System.in);
         System.out.println("Kiek prikarpe kruvelių?");
-
-        int kruv=myObj.nextInt();
+        boolean ok=false;
+        int kruv = myObj.nextInt();
+        if (1 < kruv && kruv > 30) {
+            ok=true;
+        }
+        while (ok) {
+            if (1 <= kruv && kruv <= 30) {
+                ok=true;
+            } else {
+                System.out.println("Persistengete keleta kruvelių paaukokit šiukšledėžei, kad liktų MAX 30");
+                ok=false;
+                System.out.println("Kiek prikarpe kruvelių? Nu gerai paskaičiuok ir įvesk. . . :)");
+                kruv = myObj.nextInt();
+            }
+        }
         String iv=myObj.nextLine();
         int [] duom=new int[3];
         System.out.println("Įveskite kruveles spalvos raide(Z R G) ir kiekį Pvz.: Z 14");
@@ -81,8 +94,8 @@ public class Main {
         Skaiciavimai skaiciuot=new Skaiciavimai();
         int min=skaiciuot.minMax(duom);
             System.out.println("Liko G = " + (duom[2]-min));
-        System.out.println("Liko Z = " + (duom[1]-min));
-        System.out.println("Liko R = " + (duom[0]-min));
+            System.out.println("Liko Z = " + (duom[1]-min));
+            System.out.println("Liko R = " + (duom[0]-min));
 
 
 

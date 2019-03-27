@@ -103,6 +103,11 @@ public class Skaiciavimai {
     public static int minMax(int pMas[]){
 
         int min = Arrays.stream(pMas).min().getAsInt();
+        if (min % 2 == 0) {
+
+        } else {
+            min--;
+        }
         return min;
 
     }
