@@ -44,7 +44,7 @@ public class Uzduotis2 {
         }
         for (int i = 0; i < mas.length; i++) {
             if (mas[0] <= i) {
-                System.out.println("Skaičiai kurie yra didesni už skaičių esantį kairiau: " + mas[i]);
+                System.out.println("Skaičiai kurie yra didesni už skaičių esantį kairiausiai: " + mas[i]);
             }
         }
     }
