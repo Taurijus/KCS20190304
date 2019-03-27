@@ -10,8 +10,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-//        isvestiIekrana();
-//        kIekIvesiSkaiciu();
+        isvestiIekrana();
+        kIekIvesiSkaiciu();
         kiekVeliaveliu();
     }
 
@@ -40,10 +40,6 @@ public class Main {
                 digitals[i] = sk1;
                 i++;
                 rez += sk1;
-//                if (i <= iv - 1) {
-//                    System.out.println("Įveskite kitą skaičių . . . ");
-//                    sk = myObj.nextLine();
-//                }
             } else {
                 System.out.println("Įvedėte ne skaičių Įveskite skaičių . . . ");
                 sk = myObj.nextLine();
@@ -93,22 +89,10 @@ public class Main {
         }
         Skaiciavimai skaiciuot=new Skaiciavimai();
         int min=skaiciuot.minMax(duom);
+            System.out.println("Suklijavo viso " +(min/2));
             System.out.println("Liko G = " + (duom[2]-min));
             System.out.println("Liko Z = " + (duom[1]-min));
             System.out.println("Liko R = " + (duom[0]-min));
-
-
-
-//        System.out.println(duom[0]);
-//        System.out.println(duom[1]);
-//        System.out.println(duom[2]);
-
-//        truko 20 min :( Pabaigti
-//        likorasti maziausiai surinktu skaiciu ir apskaiciuoti skirtumus
-
-
-
-
 
 
 
