@@ -63,7 +63,7 @@ public class Main {
 
         int kruv=myObj.nextInt();
         String iv=myObj.nextLine();
-        int [] duom=new int[kruv];
+        int [] duom=new int[3];
         System.out.println("Įveskite kruveles spalvos raide(Z R G) ir kiekį Pvz.: Z 14");
         for (int i = 0; i <= kruv-1; i++) {
            System.out.println("Įveskite " + (i+1) + " kruvelės spalvą ir kiekį");
@@ -78,12 +78,17 @@ public class Main {
                 duom[2]=duom[2]+  Integer.parseInt(iv.substring(2,iv.length()));
             }
         }
+        Skaiciavimai skaiciuot=new Skaiciavimai();
+        int min=skaiciuot.minMax(duom);
+            System.out.println("Liko G = " + (duom[2]-min));
+        System.out.println("Liko Z = " + (duom[1]-min));
+        System.out.println("Liko R = " + (duom[0]-min));
 
 
 
-        System.out.println(duom[0]);
-        System.out.println(duom[1]);
-        System.out.println(duom[2]);
+//        System.out.println(duom[0]);
+//        System.out.println(duom[1]);
+//        System.out.println(duom[2]);
 
 //        truko 20 min :( Pabaigti
 //        likorasti maziausiai surinktu skaiciu ir apskaiciuoti skirtumus

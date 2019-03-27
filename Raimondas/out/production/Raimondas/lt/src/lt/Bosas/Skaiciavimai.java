@@ -1,4 +1,6 @@
 package lt.Bosas;
+import java.util.Arrays;
+
 
 public class Skaiciavimai {
     public  int[] skaiciaiMazesnuUzPaskutiniNari(int pMas[]) {
@@ -97,5 +99,14 @@ public class Skaiciavimai {
         }
         return sk;
     }
+
+    public static int minMax(int pMas[]){
+
+        int min = Arrays.stream(pMas).min().getAsInt();
+        return min;
+
+    }
+
+
 
 }
