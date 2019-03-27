@@ -3,6 +3,9 @@ package lt.kaunascoding;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        Uzduotis1 obj1 = new Uzduotis1();
+        obj1.Hello();
+
+
     }
 }
